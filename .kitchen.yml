@@ -20,7 +20,7 @@ platforms:
       image_id: ami-d74be5b8
     transport:
       username: ec2-user
-      ssh_key: ~/pdv_for_test_kitchen.pem
+      ssh_key: /tmp/pdv_for_test_kitchen.pem
 
 suites:
   - name: default
