@@ -1,0 +1,22 @@
+.vagrant
+*~
+*#
+.#*
+\#*#
+.*.sw[a-z]
+*.un~
+
+pdv_for_test_kitchen.pem
+
+# Bundler
+Gemfile.lock
+bin/*
+.bundle/*
+
+# test kitchen
+.kitchen/
+.kitchen.local.yml
+
+# Chef
+Berksfile.lock
+Policyfile.lock.json

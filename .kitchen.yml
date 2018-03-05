@@ -1,0 +1,32 @@
+driver:
+  name: ec2
+  aws_ssh_key_id: pdv_for_test_kitchen
+  region: eu-central-1
+  availability_zone: eu-central-1b
+  require_chef_omnibus: true
+  security_group_ids: sg-f053c89a
+  associate_public_ip: true
+  interface: dns
+
+provisioner:
+  name: chef_solo
+
+verifier:
+  name: inspec
+
+platforms:
+  - name: amazon
+    driver:
+      image_id: ami-d74be5b8
+    transport:
+      username: ec2-user
+      ssh_key: ./pdv_for_test_kitchen.pem
+
+suites:
+  - name: default
+    run_list:
+      - recipe[pet_cookbook::default]
+    attributes:
+    verifier:
+      inspec_tests:
+        - test/integration/default

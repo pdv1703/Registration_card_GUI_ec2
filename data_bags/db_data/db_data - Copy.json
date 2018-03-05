@@ -1,0 +1,9 @@
+{
+  "service_initial_root_password": "password",
+  "root_user": "root",
+  "schema_name": "schema.sql",
+  "Pregnant_Admin": "Pregnant_Admin",
+  "Pregnant_Admin_pass": "a1w2PregAdmin",
+  "Remote_user": "remote",
+  "Remote_pass": "remote"
+}
